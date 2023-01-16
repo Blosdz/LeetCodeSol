@@ -1,0 +1,30 @@
+#include<iostream>
+#include<vector>
+
+using namespace std;
+ 
+class Solution{
+public: 
+	bool canVisitAllRooms(vector<vector<int>>& rooms){
+		return true;
+	}
+};
+
+int main(){
+	Solution sol;
+	vector<vector<int>>room={{1},{2},{3},{1},{5}};
+	vector <int> arrys={1,4,2,3};
+	int key=0;
+	for(int i=0;i<room.size();i++){
+		for(int j=0;j<room[i].size();j++){
+			if(key==j || j==0){
+				cout<<"we enter door "<<j<<": ";
+				key=room[i][j]; //Consigue primera llave
+			}else{
+				cout<<"we can not enter thsi room "<<j<<"";
+			}
+		}
+		cout<<endl;
+	}
+	
+}

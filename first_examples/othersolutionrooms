@@ -1,0 +1,17 @@
+class Solution {
+public:
+    void dfs(vector<vector<int>>&g, int s, vector<bool> &v){
+        v[s]=true;
+        for(int i = 0; i<g[s].size(); i++){
+            if(!v[g[s][i]])dfs(g,g[s][i],v);
+        }
+    }
+    bool canVisitAllRooms(vector<vector<int>>& rooms) {
+        int i, n=rooms.size();
+        vector<bool> v(n,false);
+        dfs(rooms,0,v);
+        for(i = 0; i < n; i++){
+            if(!v[i])return false;
+        }
+        return true;
+    }
