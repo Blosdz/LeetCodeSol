@@ -25,8 +25,16 @@ class Solution{
 
         }
 
+
 };
+
+for (auto &&i : v)
+{
+    
+}
+
 // solution with STACKS CHECK OUT 
+
 
 // class Solution {
 // public:
